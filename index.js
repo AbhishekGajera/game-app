@@ -15,6 +15,6 @@ const upload = multer({ dest: 'uploads/' })
 app.use(upload.single('image'))
 app.use('/api', routes)
 
-app.listen(8000, () => {
-    console.log(`Server Started at ${8000}`)
+app.listen(process.env.PORT, () => {
+    console.log(`Server Started at ${process.env.PORT}`)
 })
